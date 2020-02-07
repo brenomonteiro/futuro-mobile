@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "732661820993",
+    "firebase_url": "https://futuro-40787.firebaseio.com",
+    "project_id": "futuro-40787",
+    "storage_bucket": "futuro-40787.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:732661820993:android:3f7cdd7adc9e6b7d74a0c0",
+        "android_client_info": {
+          "package_name": "com.example.futuro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "732661820993-dg5ra1do32si0c5rcsst7oe9vhjjrsin.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.futuro",
+            "certificate_hash": "be128e9c6fc6cb340d3ee5eb8ae4c71bfc30f41c"
+          }
+        },
+        {
+          "client_id": "732661820993-9qivsd4gp61rbuldt6qqiibg888m89k9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGMHPZpAjJZaFBT7Vp98vKANDxRPWM8Vs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "732661820993-9qivsd4gp61rbuldt6qqiibg888m89k9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
