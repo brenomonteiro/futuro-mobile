@@ -1,4 +1,4 @@
-package com.example.futuro;
+package com.example.futuro.classes;
 
 public class Frequencia {
     private String admResponsavel;
