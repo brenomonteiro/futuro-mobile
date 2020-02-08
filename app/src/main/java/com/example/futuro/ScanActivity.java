@@ -14,10 +14,17 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
+import java.text.Format;
+import java.time.LocalDateTime;
+import java.util.Date;
+
 public class ScanActivity extends AppCompatActivity {
 
     private DatabaseReference referencia = FirebaseDatabase.getInstance().getReference();
+
     ImageView img;
+    String infracao = null;
+    String status = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,13 +32,17 @@ public class ScanActivity extends AppCompatActivity {
         setContentView(R.layout.activity_scan);
 
 //        referencia.child("pontos").setValue("100");
-        DatabaseReference usuarios = referencia.child("usuarios");
+
        // usuarios.child("001").child("frequencia").setValue("testao")
+
+
+
         img =  (ImageView) findViewById(R.id.idPresenca);
         final Activity activity = this;
         img.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                status = "presente";
 
                 IntentIntegrator integrator = new IntentIntegrator(activity);
                 integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE_TYPES);
@@ -48,7 +59,9 @@ public class ScanActivity extends AppCompatActivity {
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode,resultCode,data);
         if(result != null){
             if(result.getContents()!=null){
-                alert(result.getContents());
+                gravaFrequencia(result.getContents(),status,infracao);
+                alert("gravou");
+
             }else{
                 alert("Scan cancelado");
             }
@@ -59,6 +72,26 @@ public class ScanActivity extends AppCompatActivity {
 
     private void alert(String msg){
         Toast.makeText(getApplicationContext(),msg, Toast.LENGTH_SHORT).show();
+    }
+
+    private void gravaFrequencia(String idUsuario,String status,String infração){
+        DatabaseReference usuarios = referencia.child("usuarios");
+        DatabaseReference frequencia = usuarios.child("frequencia");
+
+
+        Date date = new java.util.Date();
+
+        Format formatter = new java.text.SimpleDateFormat("yyyy-MM-dd");
+        String data = formatter.format(new java.util.Date());
+
+        Frequencia frequenciaObj = new Frequencia();
+        frequenciaObj.setAdmResponsavel("Breno Monteiro");
+        frequenciaObj.setData(data);
+        frequenciaObj.setInfracao("sem uniforme");
+        frequenciaObj.setStatus(status);
+
+        usuarios.child(idUsuario).child("frequencia").child(data).setValue(frequenciaObj);
+
     }
 
 }
