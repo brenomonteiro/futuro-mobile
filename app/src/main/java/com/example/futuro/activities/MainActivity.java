@@ -17,13 +17,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ImageView img = (ImageView) findViewById(R.id.idScan);
-
+        ImageView img2 = (ImageView) findViewById(R.id.idListAlunos);
     }
 
     public void startSecondActivity(View view) {
 
         Intent secondActivity = new Intent(this, ScanActivity.class);
         startActivity(secondActivity);
+    }
+    public void startThirdActivity(View view) {
+
+        Intent thirdActivity = new Intent(this, ListActivity.class);
+        startActivity(thirdActivity);
     }
 
 }

@@ -10,8 +10,8 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.futuro.R;
-import com.example.futuro.classes.Frequencia;
-import com.example.futuro.classes.Infracao;
+import com.example.futuro.model.Frequencia;
+import com.example.futuro.model.Infracao;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.zxing.integration.android.IntentIntegrator;

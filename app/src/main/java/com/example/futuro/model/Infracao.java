@@ -1,12 +1,10 @@
-package com.example.futuro.classes;
+package com.example.futuro.model;
 
-public class Frequencia {
+public class Infracao {
     private String admResponsavel;
-    private String data;
     private String infracao;
-    private String status;
 
-    public Frequencia() {
+    public Infracao() {
     }
 
     public String getAdmResponsavel() {
@@ -17,27 +15,11 @@ public class Frequencia {
         this.admResponsavel = admResponsavel;
     }
 
-    public String getData() {
-        return data;
-    }
-
-    public void setData(String data) {
-        this.data = data;
-    }
-
     public String getInfracao() {
         return infracao;
     }
 
     public void setInfracao(String infracao) {
         this.infracao = infracao;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
     }
 }
