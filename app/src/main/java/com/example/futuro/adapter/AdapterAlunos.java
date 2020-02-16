@@ -1,5 +1,6 @@
 package com.example.futuro.adapter;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,15 +12,17 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.futuro.R;
 import com.example.futuro.model.Aluno;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class AdapterAlunos extends RecyclerView.Adapter<AdapterAlunos.MyViewHolder> {
 
-   private List<Aluno> listaAlunos;
-    public AdapterAlunos( List<Aluno> listaAlunos ) {
+   private List<Aluno> lista;
+   private Context context;
 
-        this.listaAlunos = listaAlunos;
+   public AdapterAlunos( List<Aluno> listaAlunos ) {
+
+        this.lista = listaAlunos;
+
     }
 
     @NonNull
@@ -32,27 +35,27 @@ public class AdapterAlunos extends RecyclerView.Adapter<AdapterAlunos.MyViewHold
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-    Aluno aluno = listaAlunos.get(position);
-        holder.titulo.setText(aluno.getNome());
-    holder.genero.setText(aluno.getCpf());
-    holder.ano.setText(aluno.getSala());
+    Aluno aluno = lista.get(position);
+    holder.nome.setText(aluno.getNome());
+    holder.cpf.setText(aluno.getCpf());
+    holder.sala.setText(aluno.getSala());
     }
 
     @Override
     public int getItemCount() {
 
-        return listaAlunos.size();
+        return lista.size();
     }
 
     public  class  MyViewHolder extends RecyclerView.ViewHolder{
-        TextView titulo;
-        TextView ano;
-        TextView genero;
+        TextView nome;
+        TextView cpf;
+        TextView sala;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            titulo = itemView.findViewById(R.id.textTitulo);
-            ano = itemView.findViewById(R.id.textAno);
-            genero = itemView.findViewById(R.id.textGenero);
+            nome = itemView.findViewById(R.id.textNome);
+            cpf = itemView.findViewById(R.id.textCpf);
+            sala = itemView.findViewById(R.id.textSala);
         }
     }
 

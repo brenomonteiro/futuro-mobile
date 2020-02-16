@@ -11,7 +11,7 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/textTitulo"
+            android:id="@+id/textNome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="4"
@@ -19,7 +19,7 @@
             android:textSize="18sp" />
 
         <TextView
-            android:id="@+id/textAno"
+            android:id="@+id/textSala"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -27,7 +27,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textGenero"
+        android:id="@+id/textCpf"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="genero" />
