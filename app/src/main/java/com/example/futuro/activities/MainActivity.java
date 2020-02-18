@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         ImageView img = (ImageView) findViewById(R.id.idScan);
         ImageView img2 = (ImageView) findViewById(R.id.idListAlunos);
+        ImageView img3 = (ImageView) findViewById(R.id.idAdicionar);
     }
 
     public void startSecondActivity(View view) {
@@ -29,6 +30,12 @@ public class MainActivity extends AppCompatActivity {
 
         Intent thirdActivity = new Intent(this, ListActivity.class);
         startActivity(thirdActivity);
+    }
+
+    public void startAdicionarActivity(View view) {
+
+        Intent adicionardActivity = new Intent(this, CadastroActivity.class);
+        startActivity(adicionardActivity);
     }
 
 }
