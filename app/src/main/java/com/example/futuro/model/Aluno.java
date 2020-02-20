@@ -4,6 +4,9 @@ public class Aluno {
     private String nome;
     private String cpf;
     private String Sala;
+    private String Email;
+    private String Senha;
+
 
     public Aluno() {
     }
@@ -12,6 +15,21 @@ public class Aluno {
         this.nome = nome;
         this.cpf = cpf;
         Sala = sala;
+    }
+    public String getEmail() {
+        return Email;
+    }
+
+    public void setEmail(String email) {
+        Email = email;
+    }
+
+    public String getSenha() {
+        return Senha;
+    }
+
+    public void setSenha(String senha) {
+        Senha = senha;
     }
 
     public String getNome() {

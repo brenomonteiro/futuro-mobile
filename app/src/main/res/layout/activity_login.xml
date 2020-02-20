@@ -19,26 +19,27 @@
         app:layout_constraintVertical_bias="0.53">
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/editEmail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name" />
+            android:hint="E-mail"
+            android:inputType="textPersonName" />
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/editSenha"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="Senha"
             android:inputType="textPassword" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/buttonLogar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="startMudaActivity"
-            android:text="Button" />
+            android:onClick="validarAutenticacaoUsuario"
+            android:text="Logar" />
     </LinearLayout>
 
     <TextView
